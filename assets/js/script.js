@@ -6,7 +6,13 @@ fetch('https://www.loc.gov/search/?q=baseball&fo=json')
     console.log(data);
   });
 
+  var inputGrab = $('#search');
+  var dropGrab = $('#dropdown-item');
+
+  var inputTest = $('#search').value().trim();
+  var formTest = $('#dropdown-item').value().trim();
   
-function searchApi(query, form) {
-    //create
-}
+  let query = '?format=' + formTest + '&q=' + inputTest;
+
+
+console.log(query)
