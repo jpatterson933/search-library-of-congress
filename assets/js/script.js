@@ -19,16 +19,22 @@
         var results = data.results;
 
         for (var i = 0; i < results.length; i++){
+          
           console.log(results[i].title)
           
+         
+          
           if (results[i].location) {
+            
             console.log(results[i].location[0])
+            
+            
           }
-
+          
           if (results[i].description){
-
+            
             console.log(results[i].description[0])
-
+            
           }
         }
 
@@ -37,7 +43,15 @@
       });
       
   })
+
+  $("#title").append(results[i].title)
+  $("#location").append(results[i].location[0])
+  $("#description").append(results[i].description[0])
   
+  var title = $("#title");
+  var location = $("location");
+  var description = $("description");
   
+
 
 // console.log(query)
