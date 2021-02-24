@@ -10,10 +10,14 @@
     var formTest = $('#dropdown-item').val().trim();
 
     //this query variable combines our url from the two inputs above
-    let query = '&format=' + formTest + '&q=' + inputTest;
+    let query = '&format=' + formTest + '&q=' + inputTest + "&fo=json";
+
     
-    //this combines our base url with the url that was created form the two inputed values
-    let requestUrl = 'https://www.loc.gov/search/?fo=json' + query;
+    
+    //this combines our base url with the url that was created from the two inputed values
+    let requestUrl = 'https://www.loc.gov/search/?' + query;
+
+    console.log(requestUrl)
 
     //use fetch inside of your onclick event
     fetch(requestUrl)
@@ -23,18 +27,18 @@
       .then(function (data) {
         var results = data.results;
 
-
+        console.log(results)
         //for loop that loops through the lenght of our results
         for (var i = 0; i < results.length; i++){
           
           //consol log the date
-          console.log(results[i].date)
+          console.log(results[i].title)
           //create html element and assign it to variable
           var infoDisplay = $("<h3 class='text'></h3>");
           //append html element to our class .card in our html page
-          $(".card").append(infoDisplay);    
+          $(".info-display").append(infoDisplay);    
           //appends innher html to newly created html element
-          $(infoDisplay).append("Date: " + results[i].date).innerhtml;
+          $(infoDisplay).append("Title: " + results[i].title).innerhtml;
          
           
           if (results[i].location) {
@@ -46,6 +50,7 @@
             $(".text").append(infoDisplayTwo);
             //Then we append our inner html to the html created in infoDisplayTwo variable
             $(infoDisplayTwo).append("Location: " + results[i].location[0]).innerhtml
+            
 
           }
           
@@ -59,8 +64,6 @@
             //changes inner html of newly created html element
             $(infoDisplayDescription).append("Description: " + results[i].description[0]).innerhtml;
 
-
-            
           }
         }
 
@@ -69,11 +72,3 @@
       
   })
 
-  
-  // var title = $("#title");
-  // var location = $("location");
-  // var description = $("description");
-  
-
-
-// console.log(query)

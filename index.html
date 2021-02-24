@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--bootstrap style sheet-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title></title>
 </head>
 <body>
-    <form action="/action_page.php">
-        <label for="cars">Choose a car:</label>
+    <form action="/action_page.php" id="input-form">
+        <label for="cars" id="form-title">Refine your topic</label>
         <select name="search-for" id="dropdown-item">
             <option value="maps">Maps</option>
             <option value="audio">Audio</option>
@@ -26,19 +27,9 @@
         <input type="submit" value="Submit" id="button">
       </form>
     
-      <div class="card" style="width: 18rem; " id="list">
-        <ul class="list-group list-group-flush">
-          <li id= "title" class="list-group-item"></li>
-          <li id= "location" class="list-group-item"></li>
-          <li id= "description" class="list-group-item"></li>
-        </ul>
+      <div class="info-display">
       </div>
-      
-
-
-
-
-   
+    
    
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="assets/js/script.js"></script>
