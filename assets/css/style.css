@@ -1,0 +1,70 @@
+:root {
+    --backgroundColor: rgba(100, 160, 160, 1);
+    --colorFaded: rgba(100, 160, 160, .5);
+    --colorSeeThrough: rgba(100, 160, 160, .2);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#input-form {
+    background-color: var(--backgroundColor);
+    width: 15em;
+    padding: 1em;
+    border-radius: 5px;
+    max-height: 226px;
+    box-shadow: 10px 12px 13px rgba(100, 116, 112, 1);
+}
+
+#form-title {
+    color: white;
+    font-size: 25px;
+    margin-left: 4px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#dropdown-item {
+    padding: .5em;
+    margin-left: 24px;
+    border: 2px solid var(--colorFaded);
+}
+
+#search {
+    margin-left: 7px;
+    border-radius: 0px;
+}
+
+#button {
+    color: white;
+    background-color: var(--backgroundColor);
+    margin-left: 4em;
+    margin-top: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.info-display {
+ 
+}
+
+
+h3 {
+    background-color: var(--colorSeeThrough);
+    max-width: 95%;
+    margin-left: 1em;
+    
+}
+
+.text {
+    text-align: center;
+}
+.text2 {
+    text-align: center;
+}
+
+.text3 {
+    text-align: left;
+}
